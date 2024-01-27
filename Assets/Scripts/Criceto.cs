@@ -18,7 +18,7 @@ public class Criceto : MonoBehaviour
         //}
         GameObject backStory = GameObject.FindGameObjectWithTag("BackStory");
         if (backStory != null)
-            backStory.gameObject.GetComponentInChildren<TextMeshPro>().text = _cricetoBackStory;
+            backStory.gameObject.GetComponentInChildren<TextMeshProUGUI>().text = _cricetoBackStory;
     }
 
     public void Die()
