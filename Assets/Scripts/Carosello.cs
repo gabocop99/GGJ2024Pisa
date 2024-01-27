@@ -48,7 +48,7 @@ public class Carosello : MonoBehaviour
     {
         float elapsedTime = 0;
         var startRotation = transform.rotation;
-        while (elapsedTime < animationTime)
+        while (elapsedTime <= animationTime)
         {
             transform.rotation = Quaternion.Slerp(transform.rotation, Quaternion.Euler(startRotation.eulerAngles + finalRotation), elapsedTime / animationTime);
             elapsedTime += Time.deltaTime;
