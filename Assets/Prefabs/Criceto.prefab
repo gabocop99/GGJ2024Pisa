@@ -12,6 +12,7 @@ GameObject:
   - component: {fileID: 7480600604118028114}
   - component: {fileID: 6769248660387990515}
   - component: {fileID: 4825392866159351725}
+  - component: {fileID: 4983875828183110656}
   m_Layer: 0
   m_Name: Criceto
   m_TagString: Untagged
@@ -105,3 +106,16 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 1, y: 1, z: 1}
   m_Center: {x: 0, y: 0, z: 0}
+--- !u!114 &4983875828183110656
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5045884467794712187}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c02935efd72b85e43be3a02a0ff7e8b9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _cricetoBackStory: 
