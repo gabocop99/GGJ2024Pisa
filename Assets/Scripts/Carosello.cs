@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using static UnityEditor.FilePathAttribute;
 using UnityEngine.UIElements;
+using System;
 
 public class Carosello : MonoBehaviour
 {
@@ -73,10 +74,14 @@ public class Carosello : MonoBehaviour
         var endRotation = Quaternion.Euler(startRotation.eulerAngles + finalRotation);
         while (elapsedTime <= animationTime)
         {
-            transform.rotation = Quaternion.Slerp(startRotation, endRotation, elapsedTime / animationTime);
+            float c4 = (2f * Mathf.PI) / 3f;
+            float x = elapsedTime / animationTime;
+            transform.rotation = Quaternion.Lerp(startRotation, endRotation, 1 - Mathf.Pow(1 - x, 4));
             elapsedTime += Time.deltaTime;
+            
             yield return null;
         }
+        transform.rotation = endRotation;
         coroutine = null;
     }
 }
