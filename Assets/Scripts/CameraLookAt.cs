@@ -9,7 +9,8 @@ public class CameraLookAt : MonoBehaviour
 
     private void Start()
     {
-        firstCriceto = FindAnyObjectByType<Criceto>();
-        transform.LookAt(firstCriceto.transform.position);
+        //firstCriceto = FindAnyObjectByType<Criceto>();
+        //transform.LookAt(firstCriceto.transform.position);
+        transform.LookAt(Vector3.zero);
     }
 }
