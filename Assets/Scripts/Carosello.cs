@@ -24,7 +24,7 @@ public class Carosello : MonoBehaviour
         {
             Vector3 to = new Vector3(0, rotationStep, 0);
 
-            if(coroutine == null) 
+            if (coroutine == null)
             {
                 coroutine = StartCoroutine(RotationCoroutine(to));
             }
@@ -48,12 +48,12 @@ public class Carosello : MonoBehaviour
     {
         float elapsedTime = 0;
         var startRotation = transform.rotation;
-        while(elapsedTime <= animationTime)
+        while (elapsedTime < animationTime)
         {
-            transform.rotation = Quaternion.Slerp(transform.rotation, Quaternion.Euler(startRotation.eulerAngles+finalRotation), elapsedTime/animationTime);
+            transform.rotation = Quaternion.Slerp(transform.rotation, Quaternion.Euler(startRotation.eulerAngles + finalRotation), elapsedTime / animationTime);
             elapsedTime += Time.deltaTime;
             yield return null;
         }
-        coroutine=null;
+        coroutine = null;
     }
 }

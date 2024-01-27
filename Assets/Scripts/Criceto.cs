@@ -7,6 +7,7 @@ public class Criceto : MonoBehaviour
 {
     [SerializeField] private string _cricetoBackStory;
 
+    //cose da passare tra le scene: backstory, mesh
 
     private void Start()
     {
