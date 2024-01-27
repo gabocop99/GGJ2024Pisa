@@ -2,6 +2,7 @@ using TMPro;
 using UnityEngine;
 using System.Collections;
 using Unity.VisualScripting;
+using System;
 
 public class Criceto : MonoBehaviour
 {
@@ -9,6 +10,12 @@ public class Criceto : MonoBehaviour
     [SerializeField] private GameObject _canvas;
     [SerializeField] private string id;
     static private int _cricetoNumbers;
+    [SerializeField] private Camera _camera;
+    [SerializeField] private float _selectionDistance;
+    [SerializeField] private Vector3 _vectorCameraBehind;
+    private bool _isTellingStory = false;
+
+    //dati mmebro che ci servono: 
 
     //cose da passare tra le scene: backstory, mesh
 
@@ -17,7 +24,7 @@ public class Criceto : MonoBehaviour
         _cricetoNumbers++;
         _canvas.SetActive(false);
         id = "Criceto" + _cricetoNumbers.ToString();
-        
+
 
         //BackStoryBaloon textCanva = FindObjectOfType<BackStoryBaloon>();
         ////GameObject textCanvas = GameObject.Find("BaloonCriceto");
@@ -32,7 +39,6 @@ public class Criceto : MonoBehaviour
 
     public void ActivateCanva()
     {
-        Debug.Log("porcoddiomerda");
         _canvas.SetActive(true);
     }
 
@@ -41,18 +47,38 @@ public class Criceto : MonoBehaviour
         _canvas.SetActive(false);
     }
 
-    private void OnCollisionEnter(Collision collision)
+    private void OnMouseDown()
     {
-        Debug.Log("[COLLISION ENTER]");
-
-        _canvas.SetActive(true);
+        if (!_isTellingStory)
+        {
+            CreateCopyAt(_camera.transform.position - _vectorCameraBehind);
+            MoveCamera(_camera.transform.position - _vectorCameraBehind);
+            _isTellingStory = true;
+        }
     }
 
-    private void OnCollisionExit(Collision collision)
+    private void MoveCamera(Vector3 toLook)
     {
-        Debug.Log("[COLLISION EXIT]");
-        _canvas.SetActive(false);
+        _camera.transform.position = -_vectorCameraBehind * 0.95f;
+        _camera.transform.LookAt(toLook);
     }
+
+    public void CreateCopyAt(Vector3 position)
+    {
+        Instantiate(this, position, Quaternion.identity);
+    }
+    //private void OnCollisionEnter(Collision collision)
+    //{
+    //    Debug.Log("[COLLISION ENTER]");
+
+    //    _canvas.SetActive(true);
+    //}
+
+    //private void OnCollisionExit(Collision collision)
+    //{
+    //    Debug.Log("[COLLISION EXIT]");
+    //    _canvas.SetActive(false);
+    //}
 
     public void Die()
     {

@@ -378,6 +378,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _cricetoBackStory: 
   _canvas: {fileID: 6419582804935946525}
+  id: 
+  _camera: {fileID: 0}
+  _selectionDistance: 0
+  _vectorCameraBehind: {x: 0, y: 0, z: 50}
 --- !u!1 &6419582804935946525
 GameObject:
   m_ObjectHideFlags: 0
