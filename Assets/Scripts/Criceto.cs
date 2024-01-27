@@ -7,12 +7,18 @@ public class Criceto : MonoBehaviour
 {
     [SerializeField] private string _cricetoBackStory;
     [SerializeField] private GameObject _canvas;
+    [SerializeField] private string id;
+    static private int _cricetoNumbers;
 
     //cose da passare tra le scene: backstory, mesh
 
     private void Start()
     {
+        _cricetoNumbers++;
         _canvas.SetActive(false);
+        id = "Criceto" + _cricetoNumbers.ToString();
+        
+
         //BackStoryBaloon textCanva = FindObjectOfType<BackStoryBaloon>();
         ////GameObject textCanvas = GameObject.Find("BaloonCriceto");
         //if (textCanva != null)
