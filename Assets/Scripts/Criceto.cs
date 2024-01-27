@@ -13,7 +13,9 @@ public class Criceto : MonoBehaviour
     [SerializeField] private Camera _camera;
     [SerializeField] private float _selectionDistance;
     [SerializeField] private Vector3 _vectorCameraBehind;
-    private bool _isTellingStory = false;
+    private Transform _originalPosition;
+    [SerializeField] private GameObject _storyTellingCanvas;
+    [SerializeField] private Collider _collider;
 
     //dati mmebro che ci servono: 
 
@@ -22,9 +24,10 @@ public class Criceto : MonoBehaviour
     private void Start()
     {
         _cricetoNumbers++;
-        _canvas.SetActive(false);
+        //_canvas.SetActive(false);
         id = "Criceto" + _cricetoNumbers.ToString();
 
+        _originalPosition = transform;
 
         //BackStoryBaloon textCanva = FindObjectOfType<BackStoryBaloon>();
         ////GameObject textCanvas = GameObject.Find("BaloonCriceto");
@@ -37,23 +40,30 @@ public class Criceto : MonoBehaviour
             backStory.gameObject.GetComponentInChildren<TextMeshProUGUI>().text = _cricetoBackStory;
     }
 
-    public void ActivateCanva()
+    public void ActivateCanva(GameObject canva)
     {
-        _canvas.SetActive(true);
+        canva.SetActive(true);
     }
 
-    public void DeactivateCanva()
+    public void DeactivateCanva(GameObject canva)
     {
-        _canvas.SetActive(false);
+        canva.SetActive(false);
+    }
+
+    public void DeactivateCollider()
+    {
+        _collider.enabled = false;
     }
 
     private void OnMouseDown()
     {
-        if (!_isTellingStory)
+        
         {
-            CreateCopyAt(_camera.transform.position - _vectorCameraBehind);
+            CopyObjectAt(_camera.transform.position - _vectorCameraBehind);
             MoveCamera(_camera.transform.position - _vectorCameraBehind);
-            _isTellingStory = true;
+            
+            DeactivateCanva(_canvas);
+            ActivateCanva(_storyTellingCanvas);
         }
     }
 
@@ -63,22 +73,17 @@ public class Criceto : MonoBehaviour
         _camera.transform.LookAt(toLook);
     }
 
-    public void CreateCopyAt(Vector3 position)
+    public void TeleportAt(Vector3 position)
     {
-        Instantiate(this, position, Quaternion.identity);
+        transform.position = position;
     }
-    //private void OnCollisionEnter(Collision collision)
-    //{
-    //    Debug.Log("[COLLISION ENTER]");
 
-    //    _canvas.SetActive(true);
-    //}
+    public void CopyObjectAt(Vector3 position)
+    {
+        var newCriceto = Instantiate(this, position, Quaternion.identity);
+        newCriceto.DeactivateCollider();
+    }
 
-    //private void OnCollisionExit(Collision collision)
-    //{
-    //    Debug.Log("[COLLISION EXIT]");
-    //    _canvas.SetActive(false);
-    //}
 
     public void Die()
     {
