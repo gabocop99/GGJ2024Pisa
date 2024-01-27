@@ -8,7 +8,7 @@ public class CameraColliderHandler : MonoBehaviour
     {
         if (collision.gameObject.CompareTag("Criceto"))
         {
-            collision.gameObject.GetComponent<Criceto>().ActivateCanva();
+            //collision.gameObject.GetComponent<Criceto>().ActivateCanva();
         }
     }
 }
