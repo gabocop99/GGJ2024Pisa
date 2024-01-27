@@ -24,6 +24,17 @@ public class Criceto : MonoBehaviour
             backStory.gameObject.GetComponentInChildren<TextMeshProUGUI>().text = _cricetoBackStory;
     }
 
+    public void ActivateCanva()
+    {
+        Debug.Log("porcoddiomerda");
+        _canvas.SetActive(true);
+    }
+
+    public void DeactivateCanva()
+    {
+        _canvas.SetActive(false);
+    }
+
     private void OnCollisionEnter(Collision collision)
     {
         Debug.Log("[COLLISION ENTER]");
