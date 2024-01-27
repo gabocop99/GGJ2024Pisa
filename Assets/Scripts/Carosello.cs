@@ -48,10 +48,13 @@ public class Carosello : MonoBehaviour
     {
         float elapsedTime = 0;
         var startRotation = transform.rotation;
+        var endRotation = Quaternion.Euler(startRotation.eulerAngles + finalRotation);
         while (elapsedTime <= animationTime)
         {
-            transform.rotation = Quaternion.Slerp(transform.rotation, Quaternion.Euler(startRotation.eulerAngles + finalRotation), elapsedTime / animationTime);
+            transform.rotation = Quaternion.Slerp(startRotation, endRotation, elapsedTime / animationTime);
             elapsedTime += Time.deltaTime;
+            
+            Debug.Log(elapsedTime/animationTime);
             yield return null;
         }
         coroutine = null;
