@@ -1,8 +1,9 @@
 using TMPro;
 using UnityEngine;
 using System.Collections;
-using Unity.VisualScripting;
-using System;
+using UnityEngine.UI;
+using System.Collections.Generic;
+using UnityEngine.UIElements;
 
 public class Criceto : MonoBehaviour
 {
@@ -16,6 +17,10 @@ public class Criceto : MonoBehaviour
     private Transform _originalPosition;
     [SerializeField] private GameObject _storyTellingCanvas;
     [SerializeField] private Collider _collider;
+    //[SerializeField] private float _animationTime;
+    [SerializeField] private List<Sprite> _backStory;
+    [SerializeField] private BackStoryController _backStoryController;
+    //private Coroutine _coroutine;
 
     //dati mmebro che ci servono: 
 
@@ -29,6 +34,7 @@ public class Criceto : MonoBehaviour
 
         _originalPosition = transform;
 
+        _backStoryController = FindAnyObjectByType<BackStoryController>();
         //BackStoryBaloon textCanva = FindObjectOfType<BackStoryBaloon>();
         ////GameObject textCanvas = GameObject.Find("BaloonCriceto");
         //if (textCanva != null)
@@ -36,8 +42,8 @@ public class Criceto : MonoBehaviour
         //    textCanva.gameObject.GetComponent<TextMeshPro>().text = _cricetoBackStory;
         //}
         GameObject backStory = GameObject.FindGameObjectWithTag("BackStory");
-        if (backStory != null)
-            backStory.gameObject.GetComponentInChildren<TextMeshProUGUI>().text = _cricetoBackStory;
+        //if (backStory != null)
+           // _backStory = ;
     }
 
     public void ActivateCanva(GameObject canva)
@@ -57,14 +63,13 @@ public class Criceto : MonoBehaviour
 
     private void OnMouseDown()
     {
-        
-        {
-            CopyObjectAt(_camera.transform.position - _vectorCameraBehind);
-            MoveCamera(_camera.transform.position - _vectorCameraBehind);
-            
-            DeactivateCanva(_canvas);
-            ActivateCanva(_storyTellingCanvas);
-        }
+        CopyObjectAt(_camera.transform.position - _vectorCameraBehind);
+        MoveCamera(_camera.transform.position - _vectorCameraBehind);
+        //Vector3 to = new Vector3(0, 0, -30);
+        DeactivateCanva(_canvas);
+        ActivateCanva(_storyTellingCanvas);
+        _backStoryController.DisplayBackStory(_backStory);
+        //StartCoroutine(RotationCoroutine());
     }
 
     private void MoveCamera(Vector3 toLook)
@@ -84,10 +89,25 @@ public class Criceto : MonoBehaviour
         newCriceto.DeactivateCollider();
     }
 
-
     public void Die()
     {
         //TODO
     }
 
+    //private IEnumerator RotationCoroutine()
+    //{
+    //    float elapsedTime = 0;
+    //    var startPosition = _camera.transform.position;
+    //    var endPosition = new Vector3(5,0,-20);
+    //    while (elapsedTime <= _animationTime)
+    //    {
+    //        float x = elapsedTime / _animationTime;
+    //        _camera.transform.position = Vector3.Lerp(startPosition, endPosition ,1 - Mathf.Pow(1 - x, 4));
+    //        elapsedTime += Time.deltaTime;
+
+    //        yield return null;
+    //    }
+    //    _camera.transform.position = endPosition;
+    //    _coroutine = null;
+    //}
 }

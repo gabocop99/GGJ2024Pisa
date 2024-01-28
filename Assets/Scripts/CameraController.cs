@@ -20,4 +20,5 @@ public class CameraController : MonoBehaviour
         _camera.transform.position = _originalPosition;
         _camera.transform.rotation = _originalRotation;
     }
+
 }
