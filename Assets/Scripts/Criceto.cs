@@ -8,6 +8,8 @@ using UnityEngine.UIElements;
 public class Criceto : MonoBehaviour
 {
     [SerializeField] private string _cricetoBackStory;
+
+    public string CricetoBackstory => _cricetoBackStory;
     [SerializeField] private GameObject _canvas;
     [SerializeField] private string id;
     static private int _cricetoNumbers;
@@ -20,6 +22,9 @@ public class Criceto : MonoBehaviour
     //[SerializeField] private float _animationTime;
     [SerializeField] private List<Sprite> _backStory;
     [SerializeField] private BackStoryController _backStoryController;
+    [SerializeField] private CricetoGod _cricetoGod;
+
+    private bool isChoosen = false;
 
     //private Coroutine _coroutine;
 
@@ -62,6 +67,11 @@ public class Criceto : MonoBehaviour
         canva.SetActive(false);
     }
 
+    public void SetIsChoosen()
+    {
+        isChoosen = !isChoosen;
+    }
+
     public void DeactivateCollider()
     {
         _collider.enabled = false;
@@ -94,11 +104,9 @@ public class Criceto : MonoBehaviour
     {
         var newCriceto = Instantiate(this, position, Quaternion.identity);
         newCriceto.name = "CopiaCriceto";
-        newCriceto.DeactivateCollider();
+        //newCriceto.DeactivateCollider();
         HamsterManager.instance.currentHamster = newCriceto;
     }
-
-
 
     public string GetStory()
     {

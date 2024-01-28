@@ -4,8 +4,12 @@ using UnityEngine;
 
 public class CricetoGod : MonoBehaviour
 {
+    public static CricetoGod instance;
+
     private string _badChoice1 = "Incidente domestico";
     private string _badChoice2 = "Salute";
+    [SerializeField] public Camera _mainCamera;
+    [SerializeField] public Camera _secondCamera;
 
     private string _storyToCheck;
     private Collider _collider;
@@ -15,8 +19,8 @@ public class CricetoGod : MonoBehaviour
     private void Awake()
     {
         _collider = GetComponent<Collider>();
+        instance = this;
     }
-
 
     public bool IsStoryGood()
     {
@@ -27,21 +31,4 @@ public class CricetoGod : MonoBehaviour
         }
         else return false;
     }
-
-    private void OnTriggerEnter(Collider other)
-    {
-        Debug.Log($"{name} collision with {other.gameObject.name}");
-        _storyToCheck = other.gameObject.GetComponent<Criceto>().GetStory();
-        if (!IsStoryGood())
-        {
-            _player.GetComponent<PlayerHandler>().HealthMeno();
-        }
-        else
-        {
-
-        }
-           
-    }
-
-
 }
