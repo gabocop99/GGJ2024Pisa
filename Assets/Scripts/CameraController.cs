@@ -10,7 +10,7 @@ public class CameraController : MonoBehaviour
 
     private void Awake()
     {
-        _camera = GetComponent<Camera>(); 
+        _camera = GetComponent<Camera>();
         _originalRotation = _camera.transform.rotation;
         _originalPosition = _camera.transform.position;
 
@@ -21,4 +21,13 @@ public class CameraController : MonoBehaviour
         _camera.transform.rotation = _originalRotation;
     }
 
+    public void ActivateCamera()
+    {
+        _camera.gameObject.SetActive(true);
+    }
+
+    public void DeactivateCamera()
+    {
+        _camera.gameObject.SetActive(false);
+    }
 }
