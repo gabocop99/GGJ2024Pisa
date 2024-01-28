@@ -76,6 +76,7 @@ public class BackStoryController : MonoBehaviour
 
     public void DisplayBackStory(List<Sprite> sprites)
     {
+        _image.sprite = sprites[0];
         this.sprites = sprites;
         _isDisplaying = true;
         _image.gameObject.SetActive(true);

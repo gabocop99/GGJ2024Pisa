@@ -70,7 +70,7 @@ public class Criceto : MonoBehaviour
 
     private void OnMouseDown()
     {
-        Vector3 targetPosition = new Vector3(17.87f, -8.59f, -61.2f);
+        Vector3 targetPosition = new Vector3(8.39f, -3.61f, -54.17f);
         SelfCopy = CopyObjectAt(targetPosition);
         MoveCamera(_camera.transform.position - _vectorCameraBehind);
         //Vector3 to = new Vector3(0, 0, -30);
