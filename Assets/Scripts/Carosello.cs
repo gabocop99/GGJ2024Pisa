@@ -1,9 +1,9 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using static UnityEditor.FilePathAttribute;
-using UnityEngine.UIElements;
-using System;
+//using static UnityEditor.FilePathAttribute;
+//using UnityEngine.UIElements;
+//using System;
 
 public class Carosello : MonoBehaviour
 {
@@ -82,5 +82,11 @@ public class Carosello : MonoBehaviour
         }
         transform.rotation = endRotation;
         coroutine = null;
+    }
+
+    public void DestroyCopy()
+    {
+        var copy = GameObject.Find("CopiaCriceto");
+        Destroy(copy);
     }
 }
