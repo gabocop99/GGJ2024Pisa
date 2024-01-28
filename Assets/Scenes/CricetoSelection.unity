@@ -294,9 +294,25 @@ PrefabInstance:
       propertyPath: _storyTellingCanvas
       value: 
       objectReference: {fileID: 905546443}
+    - target: {fileID: 4983875828183110656, guid: 9a4e32519fd3eb249944f3f2c6f634a6, type: 3}
+      propertyPath: _backStory.Array.size
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 4983875828183110656, guid: 9a4e32519fd3eb249944f3f2c6f634a6, type: 3}
+      propertyPath: _backStory.Array.data[0]
+      value: 
+      objectReference: {fileID: 21300000, guid: 634ff90517b85b2448f2f427ef9ec5c3, type: 3}
+    - target: {fileID: 4983875828183110656, guid: 9a4e32519fd3eb249944f3f2c6f634a6, type: 3}
+      propertyPath: _backStory.Array.data[1]
+      value: 
+      objectReference: {fileID: 21300000, guid: fbcd5dee697e45d4a89165c209eb529c, type: 3}
+    - target: {fileID: 4983875828183110656, guid: 9a4e32519fd3eb249944f3f2c6f634a6, type: 3}
+      propertyPath: _backStory.Array.data[2]
+      value: 
+      objectReference: {fileID: 21300000, guid: f09396d5532a7de449ffa9b8032dd677, type: 3}
     - target: {fileID: 5045884467794712187, guid: 9a4e32519fd3eb249944f3f2c6f634a6, type: 3}
       propertyPath: m_Name
-      value: Criceto (5)
+      value: CricetoTagliato
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -1121,7 +1137,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!114 &905546444
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1234,15 +1250,15 @@ RectTransform:
   m_GameObject: {fileID: 948791145}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
+  m_LocalScale: {x: 0.8, y: 0.8, z: 0.8}
+  m_ConstrainProportionsScale: 1
   m_Children: []
   m_Father: {fileID: 905546447}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0.5, y: 0.5}
-  m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 76, y: 32}
-  m_SizeDelta: {x: 100, y: 100}
+  m_AnchorMin: {x: 0, y: 0}
+  m_AnchorMax: {x: 1, y: 1}
+  m_AnchoredPosition: {x: 133, y: 49}
+  m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &948791147
 MonoBehaviour:
@@ -1894,18 +1910,18 @@ PrefabInstance:
     - target: {fileID: 4983875828183110656, guid: 9a4e32519fd3eb249944f3f2c6f634a6, type: 3}
       propertyPath: _backStory.Array.data[0]
       value: 
-      objectReference: {fileID: 21300000, guid: 294b49d79c70c9d42b575721a1ae6198, type: 3}
+      objectReference: {fileID: 21300000, guid: ec9ee93d8ea5b78488f587caee535dd2, type: 3}
     - target: {fileID: 4983875828183110656, guid: 9a4e32519fd3eb249944f3f2c6f634a6, type: 3}
       propertyPath: _backStory.Array.data[1]
       value: 
-      objectReference: {fileID: 21300000, guid: d285af25ba06c7642a10ec0dd281c439, type: 3}
+      objectReference: {fileID: 21300000, guid: 344a1289f0bf672459e4e83b0d43f5e4, type: 3}
     - target: {fileID: 4983875828183110656, guid: 9a4e32519fd3eb249944f3f2c6f634a6, type: 3}
       propertyPath: _backStory.Array.data[2]
       value: 
-      objectReference: {fileID: 21300000, guid: 6549797f635728e4c8dfa8ac5b4a636e, type: 3}
+      objectReference: {fileID: 21300000, guid: 95aba2f4024415b4b9847b946717e5b0, type: 3}
     - target: {fileID: 5045884467794712187, guid: 9a4e32519fd3eb249944f3f2c6f634a6, type: 3}
       propertyPath: m_Name
-      value: Criceto (1)
+      value: CricetoBibbia
       objectReference: {fileID: 0}
     - target: {fileID: 5045884467794712187, guid: 9a4e32519fd3eb249944f3f2c6f634a6, type: 3}
       propertyPath: m_IsActive
@@ -2854,9 +2870,25 @@ PrefabInstance:
       propertyPath: _storyTellingCanvas
       value: 
       objectReference: {fileID: 905546443}
+    - target: {fileID: 4983875828183110656, guid: 9a4e32519fd3eb249944f3f2c6f634a6, type: 3}
+      propertyPath: _backStory.Array.size
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 4983875828183110656, guid: 9a4e32519fd3eb249944f3f2c6f634a6, type: 3}
+      propertyPath: _backStory.Array.data[0]
+      value: 
+      objectReference: {fileID: 21300000, guid: e7c8ec8a981490840925ce006c66a8af, type: 3}
+    - target: {fileID: 4983875828183110656, guid: 9a4e32519fd3eb249944f3f2c6f634a6, type: 3}
+      propertyPath: _backStory.Array.data[1]
+      value: 
+      objectReference: {fileID: 21300000, guid: 1bf7c90c5a68b474f9f9e433c8e3c107, type: 3}
+    - target: {fileID: 4983875828183110656, guid: 9a4e32519fd3eb249944f3f2c6f634a6, type: 3}
+      propertyPath: _backStory.Array.data[2]
+      value: 
+      objectReference: {fileID: 21300000, guid: fd39a9c232785ea4bb076a91dfa19afb, type: 3}
     - target: {fileID: 5045884467794712187, guid: 9a4e32519fd3eb249944f3f2c6f634a6, type: 3}
       propertyPath: m_Name
-      value: Criceto (3)
+      value: CricetoCulo
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -2949,9 +2981,25 @@ PrefabInstance:
       propertyPath: _storyTellingCanvas
       value: 
       objectReference: {fileID: 905546443}
+    - target: {fileID: 4983875828183110656, guid: 9a4e32519fd3eb249944f3f2c6f634a6, type: 3}
+      propertyPath: _backStory.Array.size
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 4983875828183110656, guid: 9a4e32519fd3eb249944f3f2c6f634a6, type: 3}
+      propertyPath: _backStory.Array.data[0]
+      value: 
+      objectReference: {fileID: 21300000, guid: faf4d27da808ae548ad8d69a620be9b0, type: 3}
+    - target: {fileID: 4983875828183110656, guid: 9a4e32519fd3eb249944f3f2c6f634a6, type: 3}
+      propertyPath: _backStory.Array.data[1]
+      value: 
+      objectReference: {fileID: 21300000, guid: 21c805fc7a007cb4bbfb8e42473d3984, type: 3}
+    - target: {fileID: 4983875828183110656, guid: 9a4e32519fd3eb249944f3f2c6f634a6, type: 3}
+      propertyPath: _backStory.Array.data[2]
+      value: 
+      objectReference: {fileID: 21300000, guid: 887078e2874bdac4cb71ce95e1c2c3f1, type: 3}
     - target: {fileID: 5045884467794712187, guid: 9a4e32519fd3eb249944f3f2c6f634a6, type: 3}
       propertyPath: m_Name
-      value: Criceto (2)
+      value: CricetoCenere
       objectReference: {fileID: 0}
     - target: {fileID: 6419582804935946525, guid: 9a4e32519fd3eb249944f3f2c6f634a6, type: 3}
       propertyPath: m_IsActive
@@ -3038,9 +3086,25 @@ PrefabInstance:
       propertyPath: _storyTellingCanvas
       value: 
       objectReference: {fileID: 905546443}
+    - target: {fileID: 4983875828183110656, guid: 9a4e32519fd3eb249944f3f2c6f634a6, type: 3}
+      propertyPath: _backStory.Array.size
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 4983875828183110656, guid: 9a4e32519fd3eb249944f3f2c6f634a6, type: 3}
+      propertyPath: _backStory.Array.data[0]
+      value: 
+      objectReference: {fileID: 21300000, guid: 39a550d817910fc458fa5489c8676616, type: 3}
+    - target: {fileID: 4983875828183110656, guid: 9a4e32519fd3eb249944f3f2c6f634a6, type: 3}
+      propertyPath: _backStory.Array.data[1]
+      value: 
+      objectReference: {fileID: 21300000, guid: 8179e87fe7867cd4ea19f9a0f81ad7b4, type: 3}
+    - target: {fileID: 4983875828183110656, guid: 9a4e32519fd3eb249944f3f2c6f634a6, type: 3}
+      propertyPath: _backStory.Array.data[2]
+      value: 
+      objectReference: {fileID: 21300000, guid: 8dad165716358664dbf66f91b4459ec0, type: 3}
     - target: {fileID: 5045884467794712187, guid: 9a4e32519fd3eb249944f3f2c6f634a6, type: 3}
       propertyPath: m_Name
-      value: Criceto (4)
+      value: CricetoSpaventato
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
