@@ -102,10 +102,10 @@ CapsuleCollider:
   m_LayerOverridePriority: 0
   m_IsTrigger: 0
   m_ProvidesContacts: 0
-  m_Enabled: 1
+  m_Enabled: 0
   serializedVersion: 2
-  m_Radius: 0.5
-  m_Height: 2
+  m_Radius: 1
+  m_Height: 3
   m_Direction: 1
   m_Center: {x: 0, y: 0, z: 0}
 --- !u!54 &8591776209317376686
@@ -240,8 +240,8 @@ BoxCollider:
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
-  m_Size: {x: 1, y: 1, z: 1}
-  m_Center: {x: 0, y: 0, z: 0}
+  m_Size: {x: 2, y: 2.5, z: 1}
+  m_Center: {x: 0, y: 0.5, z: 0}
 --- !u!114 &4983875828183110656
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -262,3 +262,5 @@ MonoBehaviour:
   _vectorCameraBehind: {x: 0, y: 0, z: 50}
   _storyTellingCanvas: {fileID: 0}
   _collider: {fileID: 4825392866159351725}
+  _backStory: []
+  _backStoryController: {fileID: 0}

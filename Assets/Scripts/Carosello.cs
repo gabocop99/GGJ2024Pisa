@@ -1,9 +1,9 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using static UnityEditor.FilePathAttribute;
-using UnityEngine.UIElements;
-using System;
+//using static UnityEditor.FilePathAttribute;
+//using UnityEngine.UIElements;
+//using System;
 
 public class Carosello : MonoBehaviour
 {
