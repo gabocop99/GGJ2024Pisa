@@ -21,7 +21,6 @@ public class Criceto : MonoBehaviour
     [SerializeField] private List<Sprite> _backStory;
     [SerializeField] private BackStoryController _backStoryController;
 
-    private Criceto SelfCopy;
     //private Coroutine _coroutine;
 
     //dati mmebro che ci servono: 
@@ -45,7 +44,7 @@ public class Criceto : MonoBehaviour
         //}
         GameObject backStory = GameObject.FindGameObjectWithTag("BackStory");
         //if (backStory != null)
-           // _backStory = ;
+        // _backStory = ;
     }
 
     private void Update()
@@ -71,8 +70,8 @@ public class Criceto : MonoBehaviour
     private void OnMouseDown()
     {
         Vector3 targetPosition = new Vector3(8.39f, -3.61f, -54.17f);
-        SelfCopy = CopyObjectAt(targetPosition);
         MoveCamera(_camera.transform.position - _vectorCameraBehind);
+        CopyObjectAt(targetPosition);
         //Vector3 to = new Vector3(0, 0, -30);
         DeactivateCanva(_canvas);
         ActivateCanva(_storyTellingCanvas);
@@ -91,13 +90,15 @@ public class Criceto : MonoBehaviour
         transform.position = position;
     }
 
-    public Criceto CopyObjectAt(Vector3 position)
+    public void CopyObjectAt(Vector3 position)
     {
         var newCriceto = Instantiate(this, position, Quaternion.identity);
         newCriceto.name = "CopiaCriceto";
         newCriceto.DeactivateCollider();
-        return newCriceto;
+        HamsterManager.instance.currentHamster = newCriceto;
     }
+
+
 
     public string GetStory()
     {

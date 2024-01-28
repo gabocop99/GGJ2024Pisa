@@ -10,10 +10,13 @@ public class CricetoGod : MonoBehaviour
     private string _storyToCheck;
     private Collider _collider;
 
+    [SerializeField] private GameObject _player;
+
     private void Awake()
     {
         _collider = GetComponent<Collider>();
     }
+
 
     public bool IsStoryGood()
     {
@@ -27,9 +30,12 @@ public class CricetoGod : MonoBehaviour
 
     private void OnTriggerEnter(Collider other)
     {
-
         Debug.Log($"{name} collision with {other.gameObject.name}");
         _storyToCheck = other.gameObject.GetComponent<Criceto>().GetStory();
-        IsStoryGood();
+        if (!IsStoryGood())
+        {
+            _player.GetComponent<PlayerHandler>().HealthMeno();
+        }
+           
     }
 }

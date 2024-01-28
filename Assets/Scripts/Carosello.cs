@@ -86,7 +86,6 @@ public class Carosello : MonoBehaviour
 
     public void DestroyCopy()
     {
-        var copy = GameObject.Find("CopiaCriceto");
-        Destroy(copy);
+        Destroy(HamsterManager.instance.currentHamster.gameObject);
     }
 }
