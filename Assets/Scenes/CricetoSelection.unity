@@ -372,6 +372,10 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 1764581213}
     - target: {fileID: 4983875828183110656, guid: 9a4e32519fd3eb249944f3f2c6f634a6, type: 3}
+      propertyPath: _cricetoBackStory
+      value: 'dghn '
+      objectReference: {fileID: 0}
+    - target: {fileID: 4983875828183110656, guid: 9a4e32519fd3eb249944f3f2c6f634a6, type: 3}
       propertyPath: _storyTellingCanvas
       value: 
       objectReference: {fileID: 905546443}
@@ -2341,6 +2345,10 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 1764581213}
     - target: {fileID: 4983875828183110656, guid: 9a4e32519fd3eb249944f3f2c6f634a6, type: 3}
+      propertyPath: _cricetoBackStory
+      value: qebe
+      objectReference: {fileID: 0}
+    - target: {fileID: 4983875828183110656, guid: 9a4e32519fd3eb249944f3f2c6f634a6, type: 3}
       propertyPath: _storyTellingCanvas
       value: 
       objectReference: {fileID: 905546443}
@@ -3830,6 +3838,10 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 1764581213}
     - target: {fileID: 4983875828183110656, guid: 9a4e32519fd3eb249944f3f2c6f634a6, type: 3}
+      propertyPath: _cricetoBackStory
+      value: ebe
+      objectReference: {fileID: 0}
+    - target: {fileID: 4983875828183110656, guid: 9a4e32519fd3eb249944f3f2c6f634a6, type: 3}
       propertyPath: _storyTellingCanvas
       value: 
       objectReference: {fileID: 905546443}
@@ -3950,6 +3962,10 @@ PrefabInstance:
       propertyPath: _canvas
       value: 
       objectReference: {fileID: 1764581213}
+    - target: {fileID: 4983875828183110656, guid: 9a4e32519fd3eb249944f3f2c6f634a6, type: 3}
+      propertyPath: _cricetoBackStory
+      value: Incidente domestico
+      objectReference: {fileID: 0}
     - target: {fileID: 4983875828183110656, guid: 9a4e32519fd3eb249944f3f2c6f634a6, type: 3}
       propertyPath: _storyTellingCanvas
       value: 
@@ -4266,6 +4282,10 @@ PrefabInstance:
       propertyPath: _canvas
       value: 
       objectReference: {fileID: 1764581213}
+    - target: {fileID: 4983875828183110656, guid: 9a4e32519fd3eb249944f3f2c6f634a6, type: 3}
+      propertyPath: _cricetoBackStory
+      value: Salute
+      objectReference: {fileID: 0}
     - target: {fileID: 4983875828183110656, guid: 9a4e32519fd3eb249944f3f2c6f634a6, type: 3}
       propertyPath: _storyTellingCanvas
       value: 
