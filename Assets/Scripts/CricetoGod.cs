@@ -36,6 +36,12 @@ public class CricetoGod : MonoBehaviour
         {
             _player.GetComponent<PlayerHandler>().HealthMeno();
         }
+        else
+        {
+
+        }
            
     }
+
+
 }

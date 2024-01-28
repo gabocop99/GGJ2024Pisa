@@ -2107,7 +2107,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a47a49dbb47af464db58808344ac4d17, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  sceneName: GameOver
+  sceneName: scenaMorte
 --- !u!4 &1117456132
 Transform:
   m_ObjectHideFlags: 0
