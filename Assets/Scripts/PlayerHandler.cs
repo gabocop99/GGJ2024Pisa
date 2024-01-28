@@ -15,6 +15,12 @@ public class PlayerHandler : MonoBehaviour
         _playerLifePoints--;
     }
 
+
+    public int GetHealth()
+    {
+        return _playerLifePoints;
+    }
+
     private void Update()
     {
         if (IsDead())

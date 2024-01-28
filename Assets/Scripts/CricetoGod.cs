@@ -35,12 +35,14 @@ public class CricetoGod : MonoBehaviour
         if (!IsStoryGood())
         {
             _player.GetComponent<PlayerHandler>().HealthMeno();
+            Debug.Log($"{_player.name} health: {_player.GetComponent<PlayerHandler>().GetHealth()}");
         }
         else
         {
+            Debug.Log($"{_player.name} health: {_player.GetComponent<PlayerHandler>().GetHealth()}");
 
         }
-           
+
     }
 
 
