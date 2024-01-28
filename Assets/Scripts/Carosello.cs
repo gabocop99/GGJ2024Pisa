@@ -83,4 +83,10 @@ public class Carosello : MonoBehaviour
         transform.rotation = endRotation;
         coroutine = null;
     }
+
+    public void DestroyCopy()
+    {
+        var copy = GameObject.Find("CopiaCriceto");
+        Destroy(copy);
+    }
 }

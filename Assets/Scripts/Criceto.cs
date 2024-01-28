@@ -20,6 +20,8 @@ public class Criceto : MonoBehaviour
     //[SerializeField] private float _animationTime;
     [SerializeField] private List<Sprite> _backStory;
     [SerializeField] private BackStoryController _backStoryController;
+
+    private Criceto SelfCopy;
     //private Coroutine _coroutine;
 
     //dati mmebro che ci servono: 
@@ -46,6 +48,11 @@ public class Criceto : MonoBehaviour
            // _backStory = ;
     }
 
+    private void Update()
+    {
+        transform.LookAt(_camera.transform.position);
+    }
+
     public void ActivateCanva(GameObject canva)
     {
         canva.SetActive(true);
@@ -64,7 +71,7 @@ public class Criceto : MonoBehaviour
     private void OnMouseDown()
     {
         Vector3 targetPosition = new Vector3(17.87f, -8.59f, -61.2f);
-        CopyObjectAt(targetPosition);
+        SelfCopy = CopyObjectAt(targetPosition);
         MoveCamera(_camera.transform.position - _vectorCameraBehind);
         //Vector3 to = new Vector3(0, 0, -30);
         DeactivateCanva(_canvas);
@@ -84,16 +91,18 @@ public class Criceto : MonoBehaviour
         transform.position = position;
     }
 
-    public void CopyObjectAt(Vector3 position)
+    public Criceto CopyObjectAt(Vector3 position)
     {
         var newCriceto = Instantiate(this, position, Quaternion.identity);
+        newCriceto.name = "CopiaCriceto";
         newCriceto.DeactivateCollider();
+        return newCriceto;
     }
 
-    public void Die()
-    {
-        //TODO
-    }
+    //public void DestroyCopy()
+    //{
+    //    Destroy(SelfCopy);
+    //}
 
     //private IEnumerator RotationCoroutine()
     //{
