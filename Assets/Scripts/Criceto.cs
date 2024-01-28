@@ -99,6 +99,11 @@ public class Criceto : MonoBehaviour
         return newCriceto;
     }
 
+    public string GetStory()
+    {
+        return _cricetoBackStory;
+    }
+
     //public void DestroyCopy()
     //{
     //    Destroy(SelfCopy);
