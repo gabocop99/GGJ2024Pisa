@@ -19,6 +19,7 @@ public class CricetoGod : MonoBehaviour
 
     private void OnCollisionEnter(Collision collision)
     {
-        //collision.gameObject.
+        _storyToCheck =  collision.gameObject.GetComponent<Criceto>().GetStory();
+        IsStoryGood();
     }
 }
